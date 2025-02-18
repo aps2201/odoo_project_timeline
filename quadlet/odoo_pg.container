@@ -1,0 +1,15 @@
+[Unit]
+Description=Postgres for Odoo Quadlet
+
+[Container]
+Image=docker.io/library/postgres:15
+Pod=odoo.pod
+Volume=odoo_pg.volume:/var/lib/postgresql/data
+
+Environment=POSTGRES_USER=odoo
+Environment=POSTGRES_PASSWORD=__password__
+Environment=POSTGRES_DB=odoo
+
+
+[Install]
+WantedBy=default.target

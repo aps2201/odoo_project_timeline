@@ -1,0 +1,12 @@
+[Unit]
+Description=Odoo Quadlet
+Wants=odoo_pg.service
+After=odoo_pg.service
+
+[Container]
+Image=quay.io/aps2201/odoo_project_timeline:latest
+Volume=odoo_data.volume:/usr/share/odoo/
+Pod=odoo.pod
+
+[Install]
+WantedBy=default.target

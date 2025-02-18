@@ -1,0 +1,4 @@
+[Pod]
+PodName=Odoo
+#PublishPort=4321:5432 <- enable this if you want to expose the postgres db to host
+PublishPort=8488:8069
